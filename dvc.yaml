@@ -1,0 +1,14 @@
+stages:
+  eda:
+    cmd: cd notebooks && papermill eda.ipynb ../ex_notebooks/eda.ipynb
+    deps:
+      - notebooks/eda.ipynb
+    outs:
+      - ex_notebooks/eda.ipynb
+
+  train:
+    cmd: cd notebooks && papermill train.ipynb ../ex_notebooks/train.ipynb
+    deps:
+      - notebooks/train.ipynb
+    outs:
+      - ex_notebooks/train.ipynb

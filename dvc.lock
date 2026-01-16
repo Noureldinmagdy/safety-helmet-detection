@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  eda:
+    cmd: cd notebooks && papermill eda.ipynb ../ex_notebooks/eda.ipynb
+    deps:
+    - path: notebooks/eda.ipynb
+      hash: md5
+      md5: 0e7b5b3fe75a88167e02b20a6e73eb83
+      size: 2425
+    outs:
+    - path: ex_notebooks/eda.ipynb
+      hash: md5
+      md5: 85430ccf6371b28fe6cfd0e3bcd0cabc
+      size: 5717
+  train:
+    cmd: cd notebooks && papermill train.ipynb ../ex_notebooks/train.ipynb
+    deps:
+    - path: notebooks/train.ipynb
+      hash: md5
+      md5: e9d00eadfb89a35f9ce88dba2556308e
+      size: 63684
+    outs:
+    - path: ex_notebooks/train.ipynb
+      hash: md5
+      md5: 60e2384d87ead02e5cd2245b81e46e78
+      size: 441871

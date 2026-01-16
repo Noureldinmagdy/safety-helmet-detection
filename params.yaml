@@ -1,0 +1,9 @@
+batch_size: [8,16,32]
+
+lr: 
+  low: 1e-5
+  high: 1e-1
+
+dropout:
+  low: 0.0
+  high: 0.5
